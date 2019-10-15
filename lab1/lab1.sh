@@ -3,11 +3,11 @@ cd lab1 || exit
 rm -r lab1
 
 printf "1\n"
-echo $PWD
+echo "$PWD"
 cd ..
-echo $PWD
+echo "$PWD"
 cd lab1 || exit
-echo $PWD
+echo "$PWD"
 
 printf "\n2\n"
 ls -l
@@ -15,7 +15,7 @@ ls -l
 printf "\n3\n"
 mkdir lab1
 cd lab1 || exit
-echo $PWD
+echo "$PWD"
 touch cat1
 echo "cat1 file" >> cat1
 cat cat1 > cat2
@@ -56,7 +56,7 @@ ls
 cd ..
 
 printf "\n5\n"
-echo $PWD
+echo "$PWD"
 mv b/c a
 cd a || exit
 printf "\na:\n"
@@ -66,7 +66,7 @@ cd ../b || exit
 printf "\nb:\n"
 ls
 cd ..
-rm -rf *
+rm -rf ./*
 ls
 
 printf "\n6\n"
@@ -78,12 +78,12 @@ ls -l
 rm d1
 
 printf "\n8\n"
-umask 60
+umask 717
 mkdir a
 ls -l
 rmdir a
 
-umask 600
+umask 177
 mkdir a
 echo
 ls -l

@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 int main() {
     cout << "uid: " << getuid() << "\npid: " << getpid() << endl;
     system("ls");
@@ -11,3 +11,4 @@ int main() {
     system("echo > ../lab1/out.txt");
     system("ls / > ../lab1/out.txt");
 }
+*/
