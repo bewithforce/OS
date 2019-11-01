@@ -3,7 +3,7 @@
 #include <signal.h>
 
 using namespace std;
-
+/*
 int main() {
     unsigned long long n = UINT32_MAX;
     int *arr = new int[n];
@@ -30,3 +30,4 @@ int main() {
         }
     }
 }
+*/
