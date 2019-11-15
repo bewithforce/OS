@@ -1,16 +1,22 @@
 #include <iostream>
 #include <fstream>
+#include <unistd.h>
+#include <boost/interprocess/sync/file_lock.hpp>
 
 using namespace std;
+using namespace boost::interprocess;
 
 int main() {
-    system("cd ../lab3 && ps -A > lab3.txt");
-    ifstream is("../lab3/lab3.txt");
-    string line;
-    string max_pid_line;
-    while(!is.eof()){
-        max_pid_line = line;
-        getline(is, line);
+    int max_pid = 0;
+    fork();
+    while(getpid() > max_pid){
+        max_pid = getpid();
+        fork();
     }
-    cout << max_pid_line.substr(0, max_pid_line.find(' ')) << endl;
+    file_lock fileLock("../lab3/lab3.txt");
+    fileLock.lock();
+    ofstream out("../lab3/lab3.txt");
+    out << max_pid << endl;
+    out.close();
+    fileLock.unlock();
 }
