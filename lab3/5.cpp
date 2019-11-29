@@ -5,7 +5,7 @@
 
 using namespace std;
 using namespace boost::interprocess;
-
+/*
 int main() {
     int max_pid = 0;
     fork();
@@ -20,3 +20,4 @@ int main() {
     out.close();
     fileLock.unlock();
 }
+*/

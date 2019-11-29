@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <iostream>
-#include <signal.h>
+#include <csignal>
 
 using namespace std;
 /*
@@ -12,6 +12,7 @@ int main() {
     if (t != 0) {
         while (t > 0) {
             t = fork();
+            sleep(1);
             if (t > 0) {
                 i++;
             } else if (t < 0){
@@ -22,7 +23,7 @@ int main() {
     }
     while (t >= 0) {
         if (0 == kill(getppid(), 0)) {
-            sleep(10);
+            usleep(100);
             arr = new int[n];
             continue;
         } else {
