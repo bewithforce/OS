@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 using namespace std;
-
+/*
 int main(int argc, char *argv[]) {
     int fds[2];
     pipe(fds);
@@ -11,3 +11,4 @@ int main(int argc, char *argv[]) {
     cout << errno << endl;
     exit(errno);
 }
+*/
