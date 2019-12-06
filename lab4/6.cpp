@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-
+/*
 int main(){
     if(fork()){
         string a = "a";
@@ -26,3 +26,4 @@ int main(){
 
 }
 
+*/
