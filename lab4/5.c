@@ -3,6 +3,7 @@
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /*
 char* twice(char *a){
     char *result = (char*) malloc(1 + strlen(a) + strlen(a));
@@ -22,10 +23,11 @@ int main(){
     while(write(fd[1], a, strlen(a)) > 0){
         a = twice(a);
     }
+    int b= PIPE_BUF;
+
 
     printf(errno);
     return 0;
 
 }
-
 */

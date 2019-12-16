@@ -1,21 +1,17 @@
 #include <unistd.h>
-#include <iostream>
 #include <string>
-
-using namespace std;
+#include <climits>
 /*
-int main(){
-    int fd[2];
+int main() {
+    int fd[2], i = 0;
     pipe(fd);
-    int i = 0;
-    string a = "a";
-
-    while(write(fd[1], a.c_str(), a.length()) > 0){
-        a += a;
+    while (true) {
+        size_t size = write(fd[1], "Hello, world!", 14);
+        if (size != 14) {
+            printf("Can\'t write all string!\n");
+            exit(-1);
+        }
+        printf("%lu\n", 14 * (i++) + size);
     }
-
-    cerr << errno << endl;
-
 }
-
 */
