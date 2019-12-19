@@ -1,11 +1,14 @@
 #include <unistd.h>
+#include <string>
+
+using namespace std;
 /*
 int main(){
-    char line[12];
-    read(0, line, 12);
-    for(int i = 0; i < 12; i++){
-        line[i] = line[i] + '0';
+    auto i = 0;
+    while(dup(1) >= 0){
+        i++;
     }
-    write(1, line, 12);
+    auto s = "max number of fds: " + to_string(i) + "\n";
+    write(1, s.c_str(), s.length());
 }
 */
